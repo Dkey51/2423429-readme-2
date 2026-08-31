@@ -31,6 +31,18 @@
     "webpack-dev-server": "^5.2.1"
   },
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "account",
+    "account-e2e",
+    "blog",
+    "blog-e2e",
+    "notify",
+    "notify-e2e",
+    "file",
+    "file-e2e",
+    "like",
+    "like-e2e",
+    "comment",
+    "comment-e2e"
   ]
 }
