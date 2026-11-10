@@ -1,7 +1,7 @@
 import { Post, PostStatus, PostType } from '@project/shared/app/types';
 import { Entity } from '@project/shared/core';
 
-export class BlogPostEntity implements Post, Entity<string, Post> {
+export class BlogPostEntity implements Post, Entity<string> {
   public id?: string;
   public type!: PostType;
   public authorId!: string;
@@ -26,8 +26,8 @@ export class BlogPostEntity implements Post, Entity<string, Post> {
     this.populate(post);
   }
 
-  public toPOJO() {
-    return { ...this };
+  public toPOJO(): Record<string, unknown> {
+    return { ...this } as Record<string, unknown>;
   }
 
   public populate(data: Post): void {
